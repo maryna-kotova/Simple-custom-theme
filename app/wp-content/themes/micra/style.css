@@ -1,0 +1,784 @@
+/*
+* Theme Name: Micra
+* Author: Maryna Kotova
+* Description: Simple theme for a small website
+* Version: 1.0
+* Text Domain: micra
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-weight: 300;
+    color: #1F1F1F;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.carousel-indicators {
+    bottom: -80px !important;
+}
+
+.carousel-indicators button:last-child {
+    display: none;
+}
+
+.carousel-indicators .active {
+    background: #69AE96 !important;
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    background: #E9E9E9 !important;
+    opacity: 1;
+    border: none !important;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.dashicons-arrow-left-alt:hover,
+.dashicons-arrow-right-alt:hover {
+    color: #fff;
+}
+
+#footer-widgets {
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+#footer-widgets .mk-footer-widget {
+    padding: 15px;
+    padding-bottom: 5px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+h1,
+h2,
+h2 .h2-color,
+h3 {
+    font-family: Italiana;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+h1 {
+    font-size: 90px !important;
+    line-height: 106px;
+}
+
+h2,
+h2 .h2-color,
+h3 {
+    font-size: 70px !important;
+    line-height: 82px;
+}
+
+h2 .h2-color {
+    color: #69AE96;
+}
+
+img {
+    max-width: 100%;
+}
+
+.menu li,
+.mk-navbar li {
+    list-style: none;
+}
+
+.menu li a,
+.mk-navbar li a {
+    text-decoration: none;
+    color: #A2A2A2;
+}
+
+.menu > li:active > a,
+.menu > li:hover > a,
+.menu .current-menu-item > a,
+.mk-navbar > li:active > a,
+.mk-navbar > li:hover > a,
+.mk-navbar .current-menu-item > a {
+    color: #1F1F1F;
+}
+
+.mk-menu-icon {
+    display: none;
+}
+
+.mk-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    padding: 0 30px;
+}
+
+.mk-arrow {
+    justify-content: flex-end;
+}
+
+.mk-arrow span {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 50%;
+}
+
+.mk-arrow:hover span {
+    background: #69AE96;
+}
+
+.mk-button-container {
+    display: flex;
+}
+
+.mk-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.mk-header {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #F5F9FA;
+}
+
+.mk-header-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 96vh;
+}
+
+.mk-header-content .wp-block-columns {
+    display: flex;
+    align-items: center;
+}
+
+.mk-header-content > .wp-block-columns:first-child {
+    padding-top: 105px;
+    background-color: #F5F9FA;
+}
+
+.mk-header-content .mk-second-section {
+    margin: 80px 60px;
+    padding-left: 150px;
+    background: #F5FCF8;
+}
+
+.mk-header-content img {
+    float: right;
+}
+
+.mk-header-content .wp-block-button__link {
+    margin: 0;
+    padding: 0;
+}
+
+.mk-header-img {
+    display: flex;
+}
+
+.mk-header-img .mk-img {
+    width: 100%;
+}
+
+.menu,
+.mk-navbar {
+    display: flex;
+}
+
+.mk-header-text .mk-header-description {
+    margin: 15px 0 0 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+}
+
+.mk-input-text,
+.mk-input-email {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 16px;
+    padding-left: 24px;
+    border: 1px solid #C9CCD4;
+    border-radius: 6px;
+}
+
+.mk-input-text:active,
+.mk-input-email:active,
+.mk-textarea:active,
+.mk-input-text:focus,
+.mk-input-email:focus,
+.mk-textarea:focus {
+    box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.08);
+    border: 4px solid rgba(105, 174, 150, 0.3);
+    outline-color: #3B7A64;
+}
+
+.mk-main-say {
+    padding: 20px 10%;
+}
+
+.mk-main-say-slider {
+    position: relative;
+    margin: 62px 0;
+    padding: 30px;
+    background-color: #F5F9FA;
+    border-radius: 10px;
+}
+
+.mk-main-say-text {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 15% 0;
+    padding: 0 0;
+}
+
+.mk-main-seo {
+    display: flex;
+    justify-content: space-between;
+    height: 490px;
+    margin: 100px 60px;
+    background-color: #F5FCF8;
+}
+
+.mk-main-seo-img {
+    display: flex;
+    justify-self: flex-end;
+}
+
+.mk-main-seo-text {
+    width: 50%;
+    padding: 150px 100px;
+}
+
+.mk-main-seo-text .mk-seo-text {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.mk-main-touch {
+    display: flex;
+    justify-content: center;
+    margin-top: 172px;
+    padding: 120px 0;
+    background-color: #F5F9FA;
+}
+
+.mk-main-touch-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10%
+}
+
+.mk-menu-icon-box,
+.mk-menu-icon {
+    display: none;
+}
+
+.mk-page-title {
+    text-align: center;
+}
+
+.mk-second-section h2,
+.mk-main-say-text h2 {
+    text-align: center;
+}
+
+.mk-slider-content {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 85px;
+    right: 62px;
+}
+
+.mk-slider-content .text-bold {
+    font-weight: 700;
+}
+
+.mk-textarea {
+    width: 100%;
+    height: 132px;
+    margin-bottom: 30px;
+    padding: 15px 0 0 24px;
+    border: 1px solid #C9CCD4;
+    border-radius: 6px;
+}
+
+.mk-top-section {
+    padding-left: 10%;
+}
+
+.slider-image {
+    max-width: 50%;
+    float: right;
+    margin-right: 50%;
+}
+
+.wpcf7 {
+    width: 40%;
+}
+
+.wpcf7-form p {
+    width: 100%;
+    margin: 0;
+}
+
+.mk-footer-widget .menu > li > ul {
+    display: none;
+}
+
+.mk-footer-widget .menu {
+    justify-content: center;
+}
+
+.mk-footer-widget .menu > li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 53px;
+}
+
+.mk-footer-widget .menu li a {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #A2A2A2;
+}
+
+.mk-footer-widget ul > li {
+    margin-right: 30px;
+}
+
+input.mk-button,
+.wp-block-buttons .mk-button a {
+    display: block;
+    padding: 20px 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background-color: #69AE96;
+    border: 2px solid #69AE96;
+    border-radius: 41px;
+    box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.08);
+}
+
+input.mk-button:disabled,
+.wp-block-buttons .mk-button:disabled a {
+    color: #BBB9B9;
+    background-color: #E5E5E5;
+    border: 2px solid #E5E5E5;
+}
+
+input.mk-button:focus,
+.wp-block-buttons .mk-button:focus a {
+    border: 2px solid #3B7A64;
+}
+
+.wp-block-buttons .mk-button-head-shadow a {
+    margin-top: 40px;
+    box-shadow: 0px 12px 24px rgba(58, 149, 117, 0.28);
+}
+
+input.mk-button:hover,
+.wp-block-buttons .mk-button:hover a {
+    background-color: #3B7A64;
+    border: 2px solid #3B7A64;
+}
+
+@media screen and (max-width: 1240px) {
+    .carousel-indicators {
+        bottom: -40px !important;
+    }
+
+    .mk-slider-content {
+        top: 40px;
+        width: 50%;
+    }
+
+    .slider-image {
+        max-width: 40%;
+        margin-right: 60%;
+        padding: 5% 0;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .mk-menu-body > ul > li {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 967px) {
+    .carousel-indicators {
+        bottom: -20px !important;
+    }
+
+    .mk-header-top {
+        padding-left: 30px;
+    }
+
+    .mk-main-say-slider {
+        position: static;
+    }
+
+    .mk-menu-body > ul > li {
+        margin-right: 20px;
+    }
+
+    .mk-slider-content {
+        position: static;
+        top: 0;
+        width: 60%;
+    }
+
+    .mk-second-section {
+        padding: 50px !important;
+    }
+
+    .mk-about h1,
+    .mk-main-touch-text h2,
+    .mk-top-section h1,
+    .mk-second-section h2,
+    .mk-main-say-text h2,
+    .mk-main-say-text span {
+        font-size: 50px !important;
+    }
+
+    .slider-image {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .carousel-indicators {
+        bottom: -10px !important;
+    }
+
+    #footer-widgets .mk-footer-widget {
+        width: 100%;
+    }
+
+    #footer-widgets .mk-footer-widget:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mk-button-container {
+        display: none;
+    }
+
+    .mk-main-say-text {
+        display: block;
+    }
+
+    .mk-main-say-text > div:first-child {
+        flex-basis: 100% !important;
+    }
+
+    .mk-about h1,
+    .mk-main-touch-text h2,
+    .mk-top-section h1,
+    .mk-second-section h2,
+    .mk-main-say-text h2,
+    .mk-main-say-text span {
+        font-size: 50px !important;
+    }
+
+    .mk-second-section {
+        padding: 50px !important;
+    }
+
+    .slider-image {
+        padding: 15% 0;
+    }
+}
+
+@media screen and (max-width: 782px) {
+
+    body._lock .mk-header-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f5f9fa;
+        z-index: 10;
+        overflow: auto;
+    }
+
+    body._lock .mk-menu-body {
+        display: block;
+        padding: 50px 30px 30px 30px;
+        overflow: auto;
+        z-index: 10;
+    }
+
+    .mk-menu-body {
+        display: none;
+    }
+
+    .mk-header-top span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .mk-header-menu {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .mk-header-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #f5f9fa;
+        z-index: 10;
+    }
+
+    .mk-header-top span,
+    .mk-header-top .custom-logo-link,
+    .mk-header-top .custom-logo {
+        z-index: 11;
+    }
+
+    .mk-main-say {
+        padding: 0 5%;
+    }
+
+    .mk-main-say-text {
+        margin: 0 50px;
+        padding: 0;
+    }
+
+    .mk-main-touch {
+        flex-direction: column;
+        justify-content: center;
+        margin: 50px 0 0;
+        padding: 100px;
+    }
+
+    .mk-about h1,
+    .mk-main-touch-text h2,
+    .mk-top-section h1,
+    .mk-second-section h2,
+    .mk-main-say-text h2,
+    .mk-main-say-text span {
+        font-size: 43px !important;
+    }
+
+    .mk-main-touch-text h2,
+    .mk-main-touch-text div,
+    .mk-main-touch-text p {
+        text-align: center;
+    }
+
+    .mk-navbar {
+        margin-top: 70px;
+        flex-direction: column;
+    }
+
+    .mk-second-section,
+    .mk-main-say-text {
+        display: block !important;
+    }
+
+    .mk-second-section > div,
+    .mk-main-say-text > div {
+        width: 100%;
+        flex-basis: 100% !important;
+    }
+
+    .mk-slider-content {
+        position: static;
+        top: 0;
+        width: 100%;
+    }
+
+    .mk-second-section {
+        margin: 20px !important;
+        padding: 50px !important;
+    }
+
+    .slider-image,
+    .mk-second-section > div:last-child,
+    .mk-button-container {
+        display: none !important;
+    }
+
+    .mk-submit {
+        text-align: center;
+    }
+
+    .slider-image {
+        width: 0;
+    }
+
+    .wpcf7 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .mk-menu-icon-box {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 30px;
+        width: 50px;
+        z-index: 11;
+        cursor: pointer;
+    }
+
+    .mk-menu-icon {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mk-menu-icon span,
+    .mk-menu-icon::before,
+    .mk-menu-icon::after {
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #3B7A64;
+    }
+
+    .mk-menu-icon::before,
+    .mk-menu-icon::after {
+        content: "";
+    }
+
+    .mk-menu-icon::before {
+        top: 30px;
+    }
+
+    .mk-menu-icon::after {
+        bottom: 0;
+    }
+
+    .mk-menu-icon span {
+        top: 17px;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+
+    .mk-navbar > li {
+        margin-bottom: 25px;
+    }
+
+    .mk-navbar > li > a {
+        font-size: 24px;
+    }
+
+    .mk-navbar > li > ul {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 782px) {
+
+    .mk-navbar > li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 53px;
+    }
+
+    .mk-navbar li a {
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+        color: #A2A2A2;
+    }
+
+    .mk-header-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 16px 0 74px;
+        background-color: #f5f9faf0;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .mk-menu-body {
+        display: flex;
+        align-content: center;
+    }
+
+    .mk-navbar > li:hover > ul > li > a {
+        color: #A2A2A2;
+    }
+
+    .mk-navbar > li:hover > ul > li:hover > a {
+        color: #1F1F1F;
+    }
+
+    .mk-navbar > li > .sub-menu {
+        display: none;
+        position: absolute;
+        top: 55px;
+        left: -20px;
+        width: max-content;
+        padding: 20px 20px 0 20px;
+        background-color: #FFFFFF;
+        border: 1px solid #E7E7E7;
+        border-radius: 12px;
+    }
+
+    .mk-navbar > li:hover > ul {
+        display: block;
+    }
+
+    .mk-navbar > li > ul > li {
+        margin-bottom: 20px;
+    }
+}

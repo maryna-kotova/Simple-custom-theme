@@ -1,0 +1,10 @@
+.idea
+.DS_Store*
+*.zip
+app/wp-config.php
+app/.htaccess
+.docker.env
+
+/vendor/
+app/wp-content/wp-cache-config.php
+app/wp-content/logs/

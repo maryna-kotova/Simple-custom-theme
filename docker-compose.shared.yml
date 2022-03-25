@@ -1,0 +1,64 @@
+version: "3"
+
+services:
+  php:
+    build:
+      dockerfile: ./docker/php/Dockerfile
+      context: ./
+    container_name: kotova_php
+    env_file:
+      - .docker.env
+    volumes:
+      - ./:/app
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - default
+      - shared
+
+  phpd:
+    build:
+      dockerfile: ./docker/php/Dockerfile
+      context: ./
+      args:
+        - PHP_USE_XDEBUG=true
+    container_name: kotova_phpd
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - .docker.env
+    volumes:
+      - ./:/app
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - default
+      - shared
+
+  nginx:
+    build:
+      dockerfile: ./docker/nginx/Dockerfile
+      context: ./
+    container_name: kotova_nginx
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kotova.rule=Host(`kap-weine.loc`)"
+      - "traefik.http.routers.kotova.entrypoints=web"
+    volumes:
+      - ./:/app
+    networks:
+      - default
+      - web
+
+  redis:
+    image: redis
+    container_name: kotova_redis
+    networks:
+      - default
+
+networks:
+  default:
+    external: false
+  shared:
+    external: true
+  web:
+    external: true
